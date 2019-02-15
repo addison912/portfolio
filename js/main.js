@@ -16,7 +16,7 @@ function horizontalScroll(elem, startingRow) {
 }
 //matches body height to scroll height
 function bodyHeight() {
-  $("body").css({ height: $(window).width() * 2 + $(window).height() * 4 });
+  $("body").css({ height: $(window).width() * 1 + $(window).height() * 3 });
   switchScroll();
 }
 //hightlight selection nav menu item
@@ -104,22 +104,22 @@ function switchScroll() {
   let winWidth = $(window).width();
   let main = $("#scroll-main");
   switch (true) {
-    case winTop >= 2 * winWidth + 3 * winHeight:
-      verticalScroll(main, 2);
-      navHighlight(4);
-      break;
-    case winTop >= 2 * winWidth + 2.5 * winHeight:
-      verticalScroll(main, 2);
-      navHighlight(4);
-      break;
-    case winTop >= 2 * winWidth + 2 * winHeight:
-      verticalScroll(main, 2);
-      navHighlight(3);
-      break;
-    case winTop >= 1.5 * winWidth + 2 * winHeight:
-      horizontalScroll(main, 2);
-      navHighlight(3);
-      break;
+    // case winTop >= 2 * winWidth + 3 * winHeight:
+    //   verticalScroll(main, 2);
+    //   navHighlight(4);
+    //   break;
+    // case winTop >= 2 * winWidth + 2.5 * winHeight:
+    //   verticalScroll(main, 2);
+    //   navHighlight(4);
+    //   break;
+    // case winTop >= 2 * winWidth + 2 * winHeight:
+    //   verticalScroll(main, 2);
+    //   navHighlight(3);
+    //   break;
+    // case winTop >= 1.5 * winWidth + 2 * winHeight:
+    //   horizontalScroll(main, 2);
+    //   navHighlight(3);
+    //   break;
     case winTop >= winWidth + 2 * winHeight:
       horizontalScroll(main, 2);
       navHighlight(2);

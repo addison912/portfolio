@@ -254,25 +254,25 @@ main {
 
 /*////////// experience section //////////*/
 
-#experience {
+/* #experience {
   left: 100vw;
   top: 100vh;
   background: #fff388;
-}
+} */
 
 /*////////// testimonials section //////////*/
 
-#testimonials {
+/* #testimonials {
   left: 100vw;
   top: 200vh;
   background: #ff88ef;
-}
+} */
 
 /*////////// portfolio section //////////*/
 
 #portfolio {
-  left: 200vw;
-  top: 200vh;
+  left: 100vw;
+  top: 100vh;
   background: #f3e4dd;
   overflow: hidden;
   padding: 0;
@@ -304,7 +304,10 @@ main {
   border-radius: 0 10px 10px 0;
 }
 .portfolio-description p {
-  font-size: 1em;
+  font-size: 1.25em;
+}
+.portfolio-description h4 {
+  font-size: 1.6em;
 }
 .portfolio-description a {
   color: #751515;
@@ -367,8 +370,8 @@ main {
 #contact {
   display: flex;
   align-items: center;
-  left: 200vw;
-  top: 300vh;
+  left: 100vw;
+  top: 200vh;
   background-size: 1000% 1000%;
   background-image: radial-gradient(#ece472, #ff6883, #2b8fff);
   animation: gradientBackground 45s infinite ease-in-out;
