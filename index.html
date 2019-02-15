@@ -41,13 +41,13 @@
         </div>
       </nav>
     </header>
-
     <main>
       <div id="scroll-main">
+        <!-- about me -->
+
         <section id="about" class="scroll-block">
           <div class="flex-row">
             <article>
-              <h1>Addison Moore</h1>
               <h2>Full Stack Developer | Product Designer</h2>
               <p>
                 I'm a full stack developer and Bay Area Native. Before becoming
@@ -73,14 +73,12 @@
                 src="images/me.png"
                 alt="Addison Moore, fullstack developer"
               />
-              <!-- <img
-                src="images/hire_me.gif"
-                alt="retro computer"
-                id="computer-pic"
-              /> -->
             </div>
           </div>
         </section>
+
+        <!-- Skills Section -->
+
         <section id="skills" class="scroll-block">
           <h2>Technologies</h2>
           <div class="skills flex-row">
@@ -142,6 +140,9 @@
             </ul>
           </div>
         </section>
+
+        <!-- experience -->
+
         <section id="experience" class="scroll-block">
           <h2>EXPERIENCE</h2>
           <p>
@@ -169,19 +170,22 @@
           </div>
           <div id="portfolio-carousel" class="carousel">
             <div class="carousel-item portfolio-item">
-              <img
-                src="images/Monument.png"
-                alt="Monument Blog Site"
-                class="portfolio-img"
-              />
+              <a href="plate-tracker.html">
+                <img
+                  src="images/plteTrck-carousel.png"
+                  alt="Plate Tracker Application"
+                  class="portfolio-img"
+                />
+              </a>
               <div class="portfolio-description">
-                <h4>Monument Blog Site</h4>
+                <h4>Plate Tracker</h4>
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Culpa nam dolor dignissimos fuga libero repellat sunt ad,
-                  reprehenderit veritatis, ut vero et. Quis modi unde corporis
-                  excepturi autem iste sapiente quisquam sequi dicta sed nam
-                  enim, suscipit accusantium temporibus impedit.
+                  Plate Tracker is a React-Native mobile application built
+                  around the OpenALPR library (Automatic License Plate
+                  Recognition). It allows users to scan vehicle license plates
+                  and check them against our database of over 12000 stolen
+                  vehicles. Users can register their stolen vehicles in the app
+                  and receive a notification if their license plate is scanned.
                 </p>
               </div>
             </div>
@@ -260,7 +264,7 @@
         </section>
         <section id="contact" class="scroll-block">
           <h2>Like what you see? Get in touch!</h2>
-          <form action="POST" href="http://facebook.com" id="contact">
+          <form action="POST" href="http://facebook.com">
             <div class="flex-row">
               <input type="text" placeholder="FULL NAME" />
               <input type="email" placeholder="EMAIL" />
@@ -271,7 +275,7 @@
               id="comment"
               cols="30"
               rows="10"
-              placeholder="COMMENT"
+              placeholder="MESSAGE"
             ></textarea>
             <input type="submit" value="submit" id="submit-comment" />
           </form>

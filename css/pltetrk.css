@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#home-screen {
+  height: 90vh;
+}
+
+#title {
+  font-size: 6vw;
+  margin: 0 0 0 15vh;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  line-height: 0.66;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+}
+
+main {
+  margin: 4vw;
+}
+
+#description {
+  display: flex;
+  align-items: flex-start;
+}
+
+#intro {
+  margin-left: 2vw;
+  padding: 3vw;
+}
+
+#gallery {
+  margin: 50px;
+  column-count: auto;
+  width: 1024px;
+}
+
+#gallery > img {
+  margin: 4px;
+}
+
+#gallery-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+footer {
+  background: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer a {
+  color: whitesmoke;
+  font-size: 28px;
+  font-family: "Raleway", sans-serif;
+  transition: ease-in-out 0.2s;
+}
+footer a:hover {
+  color: black;
+}
+
+footer p {
+  font-size: 20px;
+}

@@ -55,6 +55,49 @@ $(document).on({
   scroll: switchScroll
 });
 
+// toggle dropdown menu
+$("#hamburger-icon").click(function() {
+  $("#hamburger-menu").slideToggle("slow");
+  $("#menu>li>a").css({ background: (0, 0, 0, 0), color: "#ddd" });
+  $("header").css({
+    background: "black",
+    transition: ".4s ease-in-out"
+  });
+});
+
+//carousel
+let portfolioIndex = 0;
+let testimonialsIndex = 0;
+function carousel() {
+  $(".carousel-buttons").click(function(event) {
+    console.log(`${event.target.parentElement.parentElement.id}`);
+
+    let carousel = event.target.parentElement.parentElement.getElementsByClassName(
+      "carousel"
+    )[0];
+    let carouselItems = event.target.parentElement.parentElement.getElementsByClassName(
+      "carousel-item"
+    );
+
+    if (event.target.className == "left") {
+      console.log("left");
+      portfolioIndex -= 1;
+      if (portfolioIndex < 0) {
+        portfolioIndex = carouselItems.length - 1;
+      }
+      $(carousel).css({ left: `${portfolioIndex * -100}vw` });
+    } else if (event.target.className == "right") {
+      console.log("right");
+      if (portfolioIndex > carouselItems.length - 2) {
+        portfolioIndex = -1;
+      }
+      portfolioIndex += 1;
+      $(carousel).css({ left: `${portfolioIndex * -100}vw` });
+    }
+  });
+}
+
+// switch scroll direction and transition background of links in menu
 function switchScroll() {
   let winTop = $(window).scrollTop();
   let winHeight = $(window).height();
@@ -118,53 +161,4 @@ function switchScroll() {
       });
       break;
   }
-}
-
-// toggle dropdown menu
-$("#hamburger-icon").click(function() {
-  $("#hamburger-menu").slideToggle("slow");
-  $("#menu>li>a").css({ background: (0, 0, 0, 0), color: "#ddd" });
-  $("header").css({
-    background: "black",
-    transition: ".4s ease-in-out"
-  });
-});
-
-let carouselIndex;
-let portfolioIndex = 0;
-let testimonialsIndex = 0;
-function carousel() {
-  $(".carousel-buttons").click(function(event) {
-    console.log(`${event.target.parentElement.parentElement.id}`);
-    switch (event.target.parentElement.parentElement.id == portfolio) {
-      case "portfolio":
-        carouselIndex = portfolioIndex;
-        break;
-      case "testimonials":
-        carouselIndex = portfolioIndex;
-        break;
-    }
-    let carousel = event.target.parentElement.parentElement.getElementsByClassName(
-      "carousel"
-    )[0];
-    let carouselItems = event.target.parentElement.parentElement.getElementsByClassName(
-      "carousel-item"
-    );
-
-    if (event.target.className == "left") {
-      console.log("left");
-      portfolioIndex -= 1;
-      if (portfolioIndex < 0) {
-        portfolioIndex = carouselItems.length - 1;
-      }
-      $(carousel).css({ left: `${portfolioIndex * -100}vw` });
-    } else if (event.target.className == "right") {
-      console.log("right");
-      if (portfolioIndex > carouselItems.length - 2) {
-        portfolioIndex = -1;
-      }
-      portfolioIndex += 1;
-      $(carousel).css({ left: `${portfolioIndex * -100}vw` });
-    }
-  });
 }

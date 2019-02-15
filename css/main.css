@@ -1,3 +1,4 @@
+/*////////// body and main text //////////*/
 * {
   box-sizing: border-box;
 }
@@ -36,6 +37,7 @@ header {
   z-index: 1;
 }
 
+/*////////// menu and navigation //////////*/
 #top-nav {
   display: flex;
   justify-content: space-between;
@@ -86,7 +88,7 @@ header {
   font-size: 20px;
   height: 6vh;
   width: 18vw;
-  margin: 0 1vh;
+  margin: 0 2vh;
   text-transform: uppercase;
   background-color: #333;
   border-radius: 10px;
@@ -140,6 +142,8 @@ header {
   text-decoration: none;
 }
 
+/*////////// main section and scroll blocks //////////*/
+
 main {
   width: 100%;
 }
@@ -147,7 +151,6 @@ main {
 .flex-row {
   display: flex;
   flex-direction: row;
-  height: 100%;
 }
 
 #scroll-main {
@@ -174,6 +177,8 @@ main {
   text-align: center;
 }
 
+/*////////// about section //////////*/
+
 .about-images {
   display: flex;
   flex-direction: column;
@@ -195,6 +200,8 @@ main {
   border: 2px solid #000;
   height: 40vh;
 }
+
+/*////////// skills section //////////*/
 
 #skills {
   display: flex;
@@ -245,17 +252,23 @@ main {
   margin-top: 100px;
 }
 
+/*////////// experience section //////////*/
+
 #experience {
   left: 100vw;
   top: 100vh;
   background: #fff388;
 }
 
+/*////////// testimonials section //////////*/
+
 #testimonials {
   left: 100vw;
   top: 200vh;
   background: #ff88ef;
 }
+
+/*////////// portfolio section //////////*/
 
 #portfolio {
   left: 200vw;
@@ -272,7 +285,7 @@ main {
 
 .portfolio-img {
   position: relative;
-  width: 65vw;
+  width: 60vw;
   height: 40.34vw;
   border-radius: 10px 0 0 10px;
 }
@@ -283,7 +296,7 @@ main {
 }
 
 .portfolio-description {
-  width: 15vw;
+  width: 20vw;
   height: 40.43vw;
   background: white;
   overflow: scroll;
@@ -349,6 +362,8 @@ main {
   margin-right: 20vw;
 }
 
+/*////////// contact section //////////*/
+
 #contact {
   display: flex;
   align-items: center;
@@ -411,6 +426,8 @@ footer {
   background: black;
 }
 
+/*////////// contact section gradient //////////*/
+
 @keyframes gradientBackground {
   0% {
     background-position: 0% 0%;
@@ -428,6 +445,9 @@ footer {
     background-position: 0% 0%;
   }
 }
+
+/*////////// media queries //////////*/
+
 @media only screen and (max-width: 1080px) {
   #menu {
     display: none;
